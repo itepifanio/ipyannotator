@@ -43,6 +43,7 @@ class BBoxVideoState(BBoxState):
     right_menu_enabled: bool = True
     bbox_coords_selected: List[BboxVideoCoordSelected] = []
     merged_trajectories: List[str] = []
+    drawing_enabled: bool = True
 
 # Internal Cell
 
@@ -54,7 +55,6 @@ class BBoxVideoCoordinates(BBoxCoordinates):
         app_state: AppWidgetState,
         bbox_canvas_state: BBoxCanvasState,
         bbox_state: BBoxVideoState,
-        drawing_enabled: bool,
         on_btn_select_clicked: Callable,
         on_label_changed: Callable,
         on_trajectory_enabled_clicked: Callable,
@@ -183,7 +183,6 @@ class BBoxAnnotatorVideoGUI(BBoxAnnotatorGUI):
         on_label_changed: Callable,
         on_join_btn_clicked: Callable,
         on_bbox_drawn: Callable,
-        drawing_enabled: bool = True,
         fit_canvas: bool = False,
         on_save_btn_clicked: Callable = None
     ):
@@ -205,10 +204,9 @@ class BBoxAnnotatorVideoGUI(BBoxAnnotatorGUI):
 
         self._image_box = BBoxVideoCanvas(
             *self._app_state.size,
-            drawing_enabled=drawing_enabled
+            fit_canvas=self.fit_canvas,
+            drawing_enabled=self._bbox_state.drawing_enabled
         )
-
-        self._init_canvas(self._bbox_state.drawing_enabled)
 
         self.right_menu = BBoxVideoCoordinates(  # type: ignore
             app_state=self._app_state,
@@ -219,7 +217,6 @@ class BBoxAnnotatorVideoGUI(BBoxAnnotatorGUI):
             on_btn_select_clicked=self._highlight_bbox,
             on_btn_delete_clicked=self._remove_trajectory_history,
             on_label_changed=self.on_label_changed,
-            drawing_enabled=drawing_enabled,
             on_trajectory_enabled_clicked=self.on_trajectory_enabled_clicked
         )
 
@@ -483,8 +480,10 @@ class BBoxVideoAnnotator(BBoxAnnotator):
         state_params = {**self.bbox_state.dict()}
         state_params.pop('_uuid', [])
         state_params.pop('event_map', [])
+        state_params.pop('drawing_enabled', [])
         self.bbox_state = BBoxVideoState(
             uuid=self.bbox_state._uuid,
+            drawing_enabled=self._output_item.drawing_enabled,
             **state_params
         )
 
@@ -498,7 +497,6 @@ class BBoxVideoAnnotator(BBoxAnnotator):
             app_state=self.app_state,
             bbox_state=self.bbox_state,
             on_save_btn_clicked=self.on_save_btn_clicked,
-            drawing_enabled=self._output_item.drawing_enabled,
             on_label_changed=self.update_labels,
             on_join_btn_clicked=self.merge_tracks_selected,
             on_bbox_drawn=self.controller.sync_labels,

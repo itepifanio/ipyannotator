@@ -716,10 +716,17 @@ class BBoxCanvas(BBoxCanvasGUI):
 # Cell
 
 class BBoxVideoCanvas(BBoxVideoCanvasGUI):
-    def __init__(self, width, height, has_border: bool = False, drawing_enabled: bool = True):
+     def __init__(
+        self,
+        width,
+        height,
+        has_border: bool = False,
+        fit_canvas: bool = False,
+        drawing_enabled: bool = True
+    ):
         self.state = BBoxCanvasState(
             uuid=str(id(self)),
-            **{'width': width, 'height': height}
+            **{'width': width, 'height': height, 'fit_canvas': fit_canvas}
         )
         self.drawing_enabled = drawing_enabled
         super().__init__(state=self.state, has_border=has_border, drawing_enabled=drawing_enabled)

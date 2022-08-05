@@ -153,7 +153,8 @@
     "    drawing_trajectory_enabled: bool = True\n",
     "    right_menu_enabled: bool = True\n",
     "    bbox_coords_selected: List[BboxVideoCoordSelected] = []\n",
-    "    merged_trajectories: List[str] = []"
+    "    merged_trajectories: List[str] = []\n",
+    "    drawing_enabled: bool = True"
    ]
   },
   {
@@ -177,7 +178,6 @@
     "        app_state: AppWidgetState,\n",
     "        bbox_canvas_state: BBoxCanvasState,\n",
     "        bbox_state: BBoxVideoState,\n",
-    "        drawing_enabled: bool,\n",
     "        on_btn_select_clicked: Callable,\n",
     "        on_label_changed: Callable,\n",
     "        on_trajectory_enabled_clicked: Callable,\n",
@@ -318,7 +318,6 @@
     "        on_label_changed: Callable,\n",
     "        on_join_btn_clicked: Callable,\n",
     "        on_bbox_drawn: Callable,\n",
-    "        drawing_enabled: bool = True,\n",
     "        fit_canvas: bool = False,\n",
     "        on_save_btn_clicked: Callable = None\n",
     "    ):\n",
@@ -340,10 +339,9 @@
     "\n",
     "        self._image_box = BBoxVideoCanvas(\n",
     "            *self._app_state.size,\n",
-    "            drawing_enabled=drawing_enabled\n",
+    "            fit_canvas=self.fit_canvas,\n",
+    "            drawing_enabled=self._bbox_state.drawing_enabled\n",
     "        )\n",
-    "\n",
-    "        self._init_canvas(self._bbox_state.drawing_enabled)\n",
     "\n",
     "        self.right_menu = BBoxVideoCoordinates(  # type: ignore\n",
     "            app_state=self._app_state,\n",
@@ -354,7 +352,6 @@
     "            on_btn_select_clicked=self._highlight_bbox,\n",
     "            on_btn_delete_clicked=self._remove_trajectory_history,\n",
     "            on_label_changed=self.on_label_changed,\n",
-    "            drawing_enabled=drawing_enabled,\n",
     "            on_trajectory_enabled_clicked=self.on_trajectory_enabled_clicked\n",
     "        )\n",
     "\n",
@@ -638,8 +635,10 @@
     "        state_params = {**self.bbox_state.dict()}\n",
     "        state_params.pop('_uuid', [])\n",
     "        state_params.pop('event_map', [])\n",
+    "        state_params.pop('drawing_enabled', [])\n",
     "        self.bbox_state = BBoxVideoState(\n",
     "            uuid=self.bbox_state._uuid,\n",
+    "            drawing_enabled=self._output_item.drawing_enabled,\n",
     "            **state_params\n",
     "        )\n",
     "\n",
@@ -653,7 +652,6 @@
     "            app_state=self.app_state,\n",
     "            bbox_state=self.bbox_state,\n",
     "            on_save_btn_clicked=self.on_save_btn_clicked,\n",
-    "            drawing_enabled=self._output_item.drawing_enabled,\n",
     "            on_label_changed=self.update_labels,\n",
     "            on_join_btn_clicked=self.merge_tracks_selected,\n",
     "            on_bbox_drawn=self.controller.sync_labels,\n",
@@ -1345,9 +1343,35 @@
     "            annotation_file_path=construct_annotation_path(tmpdirname)\n",
     "        )\n",
     "        assert bb.view.fit_canvas is True\n",
-    "        assert bb.view._image_box.state.fit_canvas\n",
+    "        assert bb.view._image_box.state.fit_canvas is True\n",
     "        assert bb.view._image_box._state.height == 200 \n",
     "        assert bb.view._image_box._state.width == 200"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1acbf961",
+   "metadata": {
+    "tags": [
+     "remove-cell"
+    ]
+   },
+   "outputs": [],
+   "source": [
+    "%%ipytest\n",
+    "def test_it_render_bbox_on_canvas(bbox_video_fixture):\n",
+    "    bbox_video_fixture.view._image_box._state.bbox_coords = [\n",
+    "        BboxVideoCoordinate(x=361, y=395, width=71, height=239, id='0'),\n",
+    "        BboxVideoCoordinate(x=381, y=400, width=90, height=250, id='0'),\n",
+    "        BboxVideoCoordinate(x=391, y=410, width=100, height=260, id='0'),\n",
+    "    ]\n",
+    "    bbox_video_fixture.view._navi._next_btn.click()\n",
+    "    bbox_video_fixture.view._navi._prev_btn.click()\n",
+    "\n",
+    "    assert isinstance(bbox_video_fixture.view._image_box, BBoxVideoCanvas)\n",
+    "    assert len(bbox_video_fixture.view._image_box._state.bbox_coords) == 3\n",
+    "    assert len(bbox_video_fixture.bbox_state.coords) == 3"
    ]
   },
   {
@@ -1377,7 +1401,7 @@
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "Python 3",
+   "display_name": "Python 3 (ipykernel)",
    "language": "python",
    "name": "python3"
   }

@@ -1500,10 +1500,17 @@
     "#export\n",
     "\n",
     "class BBoxVideoCanvas(BBoxVideoCanvasGUI):\n",
-    "    def __init__(self, width, height, has_border: bool = False, drawing_enabled: bool = True):\n",
+    "    def __init__(\n",
+    "        self,\n",
+    "        width,\n",
+    "        height,\n",
+    "        has_border: bool = False,\n",
+    "        fit_canvas: bool = False,\n",
+    "        drawing_enabled: bool = True\n",
+    "    ):\n",
     "        self.state = BBoxCanvasState(\n",
     "            uuid=str(id(self)),\n",
-    "            **{'width': width, 'height': height}\n",
+    "            **{'width': width, 'height': height, 'fit_canvas': fit_canvas}\n",
     "        )\n",
     "        self.drawing_enabled = drawing_enabled\n",
     "        super().__init__(state=self.state, has_border=has_border, drawing_enabled=drawing_enabled)\n",
@@ -1781,7 +1788,7 @@
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "Python 3",
+   "display_name": "Python 3 (ipykernel)",
    "language": "python",
    "name": "python3"
   }

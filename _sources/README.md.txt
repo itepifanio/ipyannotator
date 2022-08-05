@@ -30,12 +30,9 @@ Ipyannotator provides a [simple API](https://palaimon.github.io/ipyannotator/nbs
 
 ### Run ipyannotator tests
 
-To run Ipyannotator's tests:
+The tests can be executed using `nbdev_test_nbs` on the terminal. 
 
-1. Install [poetry](https://python-poetry.org/docs/#installation)
-2. Create the test environment with `poetry install`
-3. Activate the poetry environment using `poetry shell`
-4. Run tests by executing `nbdev_test_nbs`
+Ipyannotator notebooks contains the development dependencies: [pytest](https://docs.pytest.org/en/7.1.x/) and [ipytest](https://github.com/chmp/ipytest). Make sure this dependencies are installed to run the tests.
 
 ### Run ipyannotator as stand-alone web app using voila
 

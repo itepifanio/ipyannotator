@@ -318,9 +318,9 @@ python-versions = "*"
 
 [[package]]
 name = "fastcore"
-version = "1.4.2"
+version = "1.5.17"
 description = "Python supercharged for fastai development"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -328,13 +328,13 @@ python-versions = ">=3.7"
 packaging = "*"
 
 [package.extras]
-dev = ["numpy", "nbdev (>=0.2.39)", "matplotlib", "pillow", "torch", "pandas"]
+dev = ["numpy", "nbdev (>=0.2.39)", "matplotlib", "pillow", "torch", "pandas", "jupyterlab"]
 
 [[package]]
 name = "fastrelease"
 version = "0.1.12"
 description = "Simplified releases using GitHub Issues"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -382,7 +382,7 @@ woff = ["zopfli (>=0.1.4)", "brotlicffi (>=0.8.0)", "brotli (>=1.0.1)"]
 name = "ghapi"
 version = "0.1.19"
 description = "A python client for the GitHub API"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -716,7 +716,7 @@ format_nongpl = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-
 name = "jupyter"
 version = "1.0.0"
 description = "Jupyter metapackage. Install all the Jupyter components in one go."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -772,7 +772,7 @@ test = ["async-generator", "ipykernel", "ipython", "mock", "pytest-asyncio", "py
 name = "jupyter-console"
 version = "6.4.0"
 description = "Jupyter terminal console"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -1166,9 +1166,9 @@ webpdf = ["pyppeteer (>=1,<1.1)"]
 
 [[package]]
 name = "nbdev"
-version = "1.2.7"
+version = "1.2.10"
 description = "Writing a library entirely in notebooks"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -1177,7 +1177,7 @@ fastcore = ">=1.4.1"
 fastrelease = "*"
 ghapi = "*"
 ipykernel = "*"
-Jinja2 = "<3.1.0"
+Jinja2 = "*"
 jupyter = "*"
 jupyter-client = "<8"
 nbconvert = ">=6.1"
@@ -1692,7 +1692,7 @@ python-versions = ">=3.6"
 name = "pyyaml"
 version = "6.0"
 description = "YAML parser and emitter for Python"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -1712,7 +1712,7 @@ py = {version = "*", markers = "implementation_name == \"pypy\""}
 name = "qtconsole"
 version = "5.2.2"
 description = "Jupyter Qt console"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">= 3.6"
 
@@ -1734,7 +1734,7 @@ test = ["flaky", "pytest", "pytest-qt"]
 name = "qtpy"
 version = "2.0.1"
 description = "Provides an abstraction layer on top of the various Qt bindings (PyQt5/6 and PySide2/6)."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -2326,7 +2326,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "2f2bb42e506a9841ebc9009138c05880144eb19261d7e579508cccd0a20b05f1"
+content-hash = "9eeb9296ad76f3cfc39996f0b5dba8c3cef796c77dcc9317c6564f164350fba2"
 
 [metadata.files]
 alabaster = []
@@ -2360,7 +2360,10 @@ defusedxml = []
 docutils = []
 entrypoints = []
 executing = []
-fastcore = []
+fastcore = [
+    {file = "fastcore-1.5.17-py3-none-any.whl", hash = "sha256:4ba69112a4fb3cb72ec6ff2c93bbceccd03ffce654db11cd20f9fce2e4c37a82"},
+    {file = "fastcore-1.5.17.tar.gz", hash = "sha256:46898e4ba4ee68779e1aabfe4a531a51c7a471498b34128b949778e5b4e02f41"},
+]
 fastrelease = []
 flake8 = []
 fonttools = []
@@ -2480,7 +2483,10 @@ myst-parser = []
 nbclassic = []
 nbclient = []
 nbconvert = []
-nbdev = []
+nbdev = [
+    {file = "nbdev-1.2.10-py3-none-any.whl", hash = "sha256:0b2eb76a35a886f2110ef6464a25351bdeba0233598869b5b549a804e3dd391a"},
+    {file = "nbdev-1.2.10.tar.gz", hash = "sha256:cbfd99ed0a0bcc140771daab0e870c641c47b6139ea0033600ecaad996a029c9"},
+]
 nbdime = []
 nbformat = []
 nbqa = []

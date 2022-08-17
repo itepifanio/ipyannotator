@@ -79,6 +79,9 @@ ENV PATH=/git-annex.linux:$PATH
 #RUN git-annex version
 
 WORKDIR /app
+
+RUN ls
+
 COPY poetry.lock pyproject.toml /app/
 
 RUN poetry install --no-root

@@ -27,17 +27,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 ENV PATH=${POETRY_HOME}/bin:${PATH}
 
-COPY . /app
+EXPOSE 8080
 
+COPY . /app/
 WORKDIR /app
 
-RUN poetry install --no-dev
+RUN ls
 
-# poetry dependency resolution is slow
-#RUN poetry add voila tqdm
-RUN poetry run pip install voila tqdm
-
-EXPOSE 8080
+RUN poetry install
 
 ENTRYPOINT ["poetry", "run", "voila", "--enable_nbextensions=True", "--no-browser", "--port=8080"]
 

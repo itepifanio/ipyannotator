@@ -99,7 +99,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="21_api_doc.html">
-  API Reference
+  API
  </a>
 </li>
 
@@ -381,7 +381,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/tmp/tmpiz47k61j&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/tmp/tmp3lcpdk27&#39;
 </pre></div>
 </div>
 </div>
@@ -396,7 +396,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Path(&#39;/tmp/tmpiz47k61j/test.csv&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Path(&#39;/tmp/tmp3lcpdk27/test.csv&#39;)
 </pre></div>
 </div>
 </div>
@@ -751,19 +751,19 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                      labels  \
-img_0.jpg  [[yellow, ellipse], [yellow, rectangle], [yell...   
-img_1.jpg               [[yellow, ellipse], [blue, ellipse]]   
-img_2.jpg               [[blue, rectangle], [blue, ellipse]]   
-img_3.jpg  [[red, rectangle], [blue, ellipse], [red, rect...   
-img_4.jpg                                   [[red, ellipse]]   
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                           labels  \
+img_0.jpg      [[red, ellipse], [red, rectangle]]   
+img_1.jpg    [[blue, ellipse], [yellow, ellipse]]   
+img_2.jpg  [[blue, ellipse], [yellow, rectangle]]   
+img_3.jpg                     [[yellow, ellipse]]   
+img_4.jpg                     [[yellow, ellipse]]   
 
-                                                       bboxs  
-img_0.jpg  [[20, 33, 65, 56], [47, 91, 128, 132], [74, 13...  
-img_1.jpg             [[102, 69, 145, 92], [49, 57, 84, 96]]  
-img_2.jpg              [[6, 26, 31, 75], [47, 69, 108, 104]]  
-img_3.jpg  [[55, 23, 106, 94], [18, 57, 43, 92], [109, 15...  
-img_4.jpg                                [[65, 45, 112, 70]]  
+                                             bboxs  
+img_0.jpg  [[53, 65, 124, 118], [20, 59, 47, 102]]  
+img_1.jpg  [[48, 33, 73, 74], [76, 112, 111, 137]]  
+img_2.jpg   [[82, 63, 133, 132], [7, 45, 40, 104]]  
+img_3.jpg                      [[81, 26, 148, 69]]  
+img_4.jpg                     [[14, 110, 73, 141]]  
 </pre></div>
 </div>
 <img alt="../_images/13_datasets_legacy_38_1.png" src="../_images/13_datasets_legacy_38_1.png" />
@@ -801,15 +801,15 @@ img_4.jpg                                [[65, 45, 112, 70]]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           labels
-img_0.jpg  yellow
+img_0.jpg     red
 img_1.jpg     red
 img_2.jpg    blue
-img_3.jpg     red
-img_4.jpg    blue
-img_5.jpg     red
-img_6.jpg    blue
-img_7.jpg  yellow
-img_8.jpg  yellow
+img_3.jpg  yellow
+img_4.jpg     red
+img_5.jpg    blue
+img_6.jpg  yellow
+img_7.jpg    blue
+img_8.jpg    blue
 img_9.jpg     red
 </pre></div>
 </div>
@@ -845,16 +845,16 @@ img_9.jpg     red
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                        labels
-img_0.jpg       [red, ellipse]
-img_1.jpg      [blue, ellipse]
-img_2.jpg     [red, rectangle]
+img_0.jpg    [blue, rectangle]
+img_1.jpg     [red, rectangle]
+img_2.jpg  [yellow, rectangle]
 img_3.jpg    [yellow, ellipse]
-img_4.jpg  [yellow, rectangle]
-img_5.jpg    [blue, rectangle]
+img_4.jpg    [blue, rectangle]
+img_5.jpg  [yellow, rectangle]
 img_6.jpg     [red, rectangle]
-img_7.jpg       [red, ellipse]
-img_8.jpg  [yellow, rectangle]
-img_9.jpg      [blue, ellipse]
+img_7.jpg      [blue, ellipse]
+img_8.jpg       [red, ellipse]
+img_9.jpg    [yellow, ellipse]
 </pre></div>
 </div>
 <img alt="../_images/13_datasets_legacy_43_1.png" src="../_images/13_datasets_legacy_43_1.png" />
@@ -900,35 +900,31 @@ img_9.jpg      [blue, ellipse]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                      labels  \
-img_0.jpg  [[yellow, ellipse], [red, rectangle], [yellow,...   
-img_1.jpg            [[red, rectangle], [yellow, rectangle]]   
-img_2.jpg  [[blue, ellipse], [blue, ellipse], [yellow, re...   
-img_3.jpg              [[blue, rectangle], [red, rectangle]]   
-img_4.jpg                              [[yellow, rectangle]]   
-img_5.jpg                                   [[red, ellipse]]   
-img_6.jpg                                  [[blue, ellipse]]   
-img_7.jpg                                [[yellow, ellipse]]   
-img_8.jpg                                [[blue, rectangle]]   
-img_9.jpg  [[yellow, ellipse], [yellow, ellipse], [red, r...   
+img_0.jpg              [[blue, rectangle], [red, rectangle]]   
+img_1.jpg  [[blue, ellipse], [blue, rectangle], [yellow, ...   
+img_2.jpg                                [[blue, rectangle]]   
+img_3.jpg  [[blue, rectangle], [yellow, rectangle], [red,...   
+img_4.jpg  [[red, ellipse], [blue, rectangle], [blue, rec...   
+img_5.jpg  [[yellow, rectangle], [blue, rectangle], [yell...   
+img_6.jpg             [[blue, rectangle], [yellow, ellipse]]   
+img_7.jpg               [[blue, ellipse], [blue, rectangle]]   
+img_8.jpg                                   [[red, ellipse]]   
+img_9.jpg  [[blue, rectangle], [yellow, rectangle], [yell...   
 
                                                        bboxs  
-img_0.jpg  [[19, 42, 46, 95], [49, 55, 86, 76], [5, 15, 3...  
-img_1.jpg               [[26, 46, 73, 89], [49, 19, 74, 36]]  
-img_2.jpg  [[34, 1, 87, 38], [0, 47, 35, 86], [39, 41, 94...  
-img_3.jpg                [[17, 1, 48, 20], [62, 23, 93, 60]]  
-img_4.jpg                                 [[38, 57, 61, 82]]  
-img_5.jpg                                 [[38, 37, 63, 54]]  
-img_6.jpg                                 [[31, 20, 70, 41]]  
-img_7.jpg                                 [[37, 34, 78, 89]]  
-img_8.jpg                                 [[31, 64, 80, 95]]  
-img_9.jpg  [[5, 61, 52, 86], [37, 4, 86, 51], [7, 30, 28,...  
+img_0.jpg               [[14, 62, 63, 93], [66, 55, 89, 80]]  
+img_1.jpg  [[6, 31, 31, 50], [59, 21, 86, 36], [52, 75, 8...  
+img_2.jpg                                 [[13, 44, 66, 89]]  
+img_3.jpg  [[12, 29, 67, 62], [69, 17, 88, 44], [35, 71, ...  
+img_4.jpg  [[3, 9, 42, 34], [60, 30, 95, 47], [12, 55, 49...  
+img_5.jpg  [[58, 18, 77, 53], [10, 20, 49, 39], [39, 59, ...  
+img_6.jpg                [[28, 9, 83, 50], [17, 50, 76, 81]]  
+img_7.jpg               [[60, 10, 95, 31], [24, 15, 47, 42]]  
+img_8.jpg                                  [[44, 5, 69, 42]]  
+img_9.jpg  [[42, 38, 87, 61], [9, 2, 60, 27], [53, 62, 88...  
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-30-50d392b87f9d&gt;:63: UserWarning: 1 bbox have been failed to create. You can increase max_tries or reduce the number and size of objects per image.
-  warnings.warn(f&quot;{bbox_sample_failed} bbox have been failed to create.&quot;
-</pre></div>
-</div>
-<img alt="../_images/13_datasets_legacy_45_2.png" src="../_images/13_datasets_legacy_45_2.png" />
+<img alt="../_images/13_datasets_legacy_45_1.png" src="../_images/13_datasets_legacy_45_1.png" />
 </div>
 </div>
 </section>

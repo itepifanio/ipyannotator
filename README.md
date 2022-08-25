@@ -138,4 +138,4 @@ Copyright 2022 onwards, Palaimon GmbH. Licensed under the Apache License, Versio
 
 <img src="https://palaimon.goatcounter.com/count?p=/ipyannotator">
 
-![](https://palaimon.goatcounter.com/count?p=/ipyannotator)
+![](https://palaimon.goatcounter.com/count?p=/github)

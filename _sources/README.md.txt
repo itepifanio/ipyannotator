@@ -1,6 +1,8 @@
 # Ipyannotator - the infinitely hackable annotation framework
 
 ![CI-Badge](https://github.com/palaimon/ipyannotator/workflows/CI/badge.svg)
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.04480/status.svg)](https://doi.org/10.21105/joss.04480)
+
 
 Ipyannotator is a flexible annotation system. Developed to allow users to hack its features by extending and customizing it. 
 
@@ -17,6 +19,23 @@ At https://palaimon.io we have used the concepts underlying Ipyannotator interna
 ## Please star, fork and open issues!
 
 Please let us know if you find this repository useful. Your feedback will help us to turn this proof of concept into a comprehensive library.
+
+## Citation
+
+If you make use of this software for your work we would appreciate it if you would cite the paper from the Journal of Open Source Software:
+
+```bibtex
+@article{Epifânio2022,
+   title = {Ipyannotator: the infinitely hackable annotation framework},
+   author = {Ítalo Epifânio and Oleksandr Pysarenko and Immanuel Bayer},
+   journal = {Journal of Open Source Software},
+   publisher = {The Open Journal},
+   volume = {7},
+   number = {76},
+   pages = {4480},
+   year = {2022}
+} 
+```
 
 ## Install
 
@@ -117,7 +136,4 @@ The authors acknowledge the financial support by the Federal Ministry for Digita
 Copyright 2022 onwards, Palaimon GmbH. Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project's files except in compliance with the License. A copy of the License is provided in the LICENSE file in this repository.
 
 
-
-<!-- Matomo Image Tracker-->
-<img referrerpolicy="no-referrer-when-downgrade" src="https://matomo.palaimon.io/matomo.php?idsite=4&amp;rec=1" style="border:0" alt="" />
-<!-- End Matomo -->
+<img src="https://palaimon.goatcounter.com/count?p=/ipyannotator">

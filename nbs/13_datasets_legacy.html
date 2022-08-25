@@ -387,7 +387,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/tmp/tmpqo5z5bac&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/tmp/tmprjv460b5&#39;
 </pre></div>
 </div>
 </div>
@@ -402,7 +402,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Path(&#39;/tmp/tmpqo5z5bac/test.csv&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Path(&#39;/tmp/tmprjv460b5/test.csv&#39;)
 </pre></div>
 </div>
 </div>
@@ -758,18 +758,18 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                      labels  \
-img_0.jpg                                   [[red, ellipse]]   
-img_1.jpg                                  [[blue, ellipse]]   
-img_2.jpg  [[yellow, rectangle], [red, ellipse], [blue, e...   
+img_0.jpg                 [[red, ellipse], [red, rectangle]]   
+img_1.jpg  [[yellow, ellipse], [blue, rectangle], [yellow...   
+img_2.jpg  [[yellow, rectangle], [red, ellipse], [yellow,...   
 img_3.jpg                                  [[blue, ellipse]]   
-img_4.jpg                                 [[red, rectangle]]   
+img_4.jpg  [[yellow, ellipse], [blue, ellipse], [red, ell...   
 
                                                        bboxs  
-img_0.jpg                                 [[51, 4, 138, 53]]  
-img_1.jpg                                [[15, 79, 68, 140]]  
-img_2.jpg  [[55, 39, 96, 80], [104, 12, 145, 77], [14, 20...  
-img_3.jpg                               [[11, 111, 70, 142]]  
-img_4.jpg                               [[92, 62, 135, 103]]  
+img_0.jpg              [[63, 0, 116, 46], [71, 51, 138, 96]]  
+img_1.jpg  [[4, 72, 89, 123], [82, 9, 127, 66], [8, 19, 7...  
+img_2.jpg  [[80, 15, 123, 46], [97, 81, 140, 120], [21, 3...  
+img_3.jpg                                [[94, 27, 129, 68]]  
+img_4.jpg  [[3, 45, 68, 96], [96, 37, 125, 76], [48, 109,...  
 </pre></div>
 </div>
 <img alt="../_images/13_datasets_legacy_38_1.png" src="../_images/13_datasets_legacy_38_1.png" />
@@ -807,15 +807,15 @@ img_4.jpg                               [[92, 62, 135, 103]]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           labels
-img_0.jpg     red
-img_1.jpg     red
-img_2.jpg  yellow
+img_0.jpg  yellow
+img_1.jpg    blue
+img_2.jpg     red
 img_3.jpg  yellow
 img_4.jpg     red
-img_5.jpg  yellow
-img_6.jpg     red
+img_5.jpg    blue
+img_6.jpg  yellow
 img_7.jpg    blue
-img_8.jpg    blue
+img_8.jpg  yellow
 img_9.jpg    blue
 </pre></div>
 </div>
@@ -851,16 +851,16 @@ img_9.jpg    blue
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                        labels
-img_0.jpg    [blue, rectangle]
-img_1.jpg      [blue, ellipse]
-img_2.jpg    [blue, rectangle]
-img_3.jpg  [yellow, rectangle]
-img_4.jpg    [blue, rectangle]
-img_5.jpg  [yellow, rectangle]
-img_6.jpg       [red, ellipse]
-img_7.jpg      [blue, ellipse]
-img_8.jpg  [yellow, rectangle]
-img_9.jpg    [blue, rectangle]
+img_0.jpg       [red, ellipse]
+img_1.jpg    [blue, rectangle]
+img_2.jpg       [red, ellipse]
+img_3.jpg     [red, rectangle]
+img_4.jpg     [red, rectangle]
+img_5.jpg       [red, ellipse]
+img_6.jpg     [red, rectangle]
+img_7.jpg  [yellow, rectangle]
+img_8.jpg     [red, rectangle]
+img_9.jpg    [yellow, ellipse]
 </pre></div>
 </div>
 <img alt="../_images/13_datasets_legacy_43_1.png" src="../_images/13_datasets_legacy_43_1.png" />
@@ -906,28 +906,28 @@ img_9.jpg    [blue, rectangle]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                      labels  \
-img_0.jpg           [[blue, rectangle], [yellow, rectangle]]   
-img_1.jpg               [[blue, ellipse], [blue, rectangle]]   
-img_2.jpg  [[blue, ellipse], [blue, rectangle], [red, ell...   
-img_3.jpg  [[yellow, rectangle], [red, rectangle], [red, ...   
-img_4.jpg               [[blue, ellipse], [yellow, ellipse]]   
-img_5.jpg                   [[red, ellipse], [red, ellipse]]   
-img_6.jpg  [[red, ellipse], [red, rectangle], [red, ellip...   
-img_7.jpg                              [[yellow, rectangle]]   
-img_8.jpg  [[blue, rectangle], [red, rectangle], [blue, e...   
-img_9.jpg                              [[yellow, rectangle]]   
+img_0.jpg  [[blue, ellipse], [blue, rectangle], [blue, re...   
+img_1.jpg  [[red, rectangle], [yellow, rectangle], [red, ...   
+img_2.jpg  [[yellow, ellipse], [red, ellipse], [blue, rec...   
+img_3.jpg  [[red, ellipse], [blue, ellipse], [blue, ellip...   
+img_4.jpg  [[blue, ellipse], [red, ellipse], [blue, ellip...   
+img_5.jpg  [[red, rectangle], [blue, ellipse], [red, elli...   
+img_6.jpg                                 [[red, rectangle]]   
+img_7.jpg                                [[blue, rectangle]]   
+img_8.jpg              [[red, rectangle], [blue, rectangle]]   
+img_9.jpg                                  [[blue, ellipse]]   
 
                                                        bboxs  
-img_0.jpg               [[37, 14, 62, 53], [68, 12, 93, 39]]  
-img_1.jpg                [[1, 45, 60, 82], [65, 10, 96, 37]]  
-img_2.jpg  [[12, 48, 63, 87], [33, 18, 80, 45], [68, 50, ...  
-img_3.jpg  [[20, 20, 61, 55], [6, 77, 39, 94], [17, 57, 5...  
-img_4.jpg                 [[14, 3, 59, 44], [9, 71, 54, 96]]  
-img_5.jpg                [[52, 41, 97, 86], [5, 33, 52, 64]]  
-img_6.jpg  [[25, 60, 66, 89], [0, 8, 24, 27], [66, 23, 97...  
-img_7.jpg                                 [[43, 62, 74, 85]]  
-img_8.jpg  [[35, 51, 90, 90], [48, 17, 85, 38], [1, 69, 2...  
-img_9.jpg                                  [[57, 5, 90, 32]]  
+img_0.jpg  [[10, 39, 53, 62], [56, 29, 97, 76], [17, 68, ...  
+img_1.jpg  [[29, 16, 88, 47], [0, 39, 24, 60], [27, 67, 7...  
+img_2.jpg  [[34, 23, 87, 56], [28, 67, 45, 96], [43, 2, 6...  
+img_3.jpg  [[57, 37, 98, 94], [9, 23, 30, 44], [17, 47, 4...  
+img_4.jpg  [[51, 70, 78, 85], [32, 22, 89, 59], [0, 49, 2...  
+img_5.jpg  [[79, 56, 94, 85], [0, 59, 28, 76], [21, 9, 72...  
+img_6.jpg                                  [[32, 6, 85, 49]]  
+img_7.jpg                                 [[32, 15, 53, 38]]  
+img_8.jpg                [[25, 30, 80, 71], [1, 73, 28, 96]]  
+img_9.jpg                                  [[51, 7, 74, 48]]  
 </pre></div>
 </div>
 <img alt="../_images/13_datasets_legacy_45_1.png" src="../_images/13_datasets_legacy_45_1.png" />

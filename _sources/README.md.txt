@@ -136,4 +136,4 @@ The authors acknowledge the financial support by the Federal Ministry for Digita
 Copyright 2022 onwards, Palaimon GmbH. Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project's files except in compliance with the License. A copy of the License is provided in the LICENSE file in this repository.
 
 
-<img src="https://palaimon.goatcounter.com/count?p=/test">
+<img src="https://palaimon.goatcounter.com/count?p=/test-img">
